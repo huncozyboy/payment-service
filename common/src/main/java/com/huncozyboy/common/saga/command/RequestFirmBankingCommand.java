@@ -1,4 +1,4 @@
-package com.common.saga.command;
+package com.huncozyboy.common.saga.command;
 
 import org.axonframework.modelling.command.TargetAggregateIdentifier;
 

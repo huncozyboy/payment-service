@@ -1,4 +1,4 @@
-package com.common;
+package com.huncozyboy.common;
 
 import java.util.Set;
 

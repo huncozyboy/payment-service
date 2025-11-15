@@ -1,4 +1,4 @@
-package com.common.saga.event;
+package com.huncozyboy.common.saga.event;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

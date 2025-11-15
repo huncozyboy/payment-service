@@ -1,4 +1,4 @@
-package com.common.saga.command;
+package com.huncozyboy.common.saga.command;
 
 import org.axonframework.modelling.command.TargetAggregateIdentifier;
 
@@ -9,14 +9,14 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class RollbackFirmBankingRequestCommand {
+public class CheckRegisteredBankAccountCommand {
 
-	private String rollbackFirmBankingId;
 	@TargetAggregateIdentifier
 	private String aggregateIdentifier;
-	private String rechargeRequestId;
+	private String rechargingRequestId;
+	private String CheckRegisteredBankAccountId;
 	private String membershipId;
 	private String bankName;
 	private String bankAccountNumber;
-	private int moneyAmount;
+	private int amount;
 }
