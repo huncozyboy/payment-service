@@ -3,9 +3,12 @@ package com.huncozyboy.banking.adapter.axon.aggregate;
 import static org.axonframework.modelling.command.AggregateLifecycle.apply;
 
 import jakarta.validation.constraints.NotNull;
+
 import java.util.UUID;
+
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
 import org.axonframework.commandhandling.CommandHandler;
 import org.axonframework.eventsourcing.EventSourcingHandler;
 import org.axonframework.modelling.command.AggregateIdentifier;
@@ -48,14 +51,6 @@ public class RequestFirmBankingAggregate {
 			command.getToBankName(),
 			command.getToBankAccountNumber(),
 			command.getMoneyAmount()));
-	}
-
-	@CommandHandler
-	public String handle(@NotNull UpdateRequestFirmBankingCommand command) {
-		// store event
-		apply(new UpdateRequestFirmBankingEvent(command.getAggregateIdentifier(),
-			command.getFirmBankingStatus()));
-		return id;
 	}
 
 	@CommandHandler
@@ -129,6 +124,14 @@ public class RequestFirmBankingAggregate {
 			command.getMembershipId(),
 			id)
 		);
+	}
+
+	@CommandHandler
+	public String handle(@NotNull UpdateRequestFirmBankingCommand command) {
+		// store event
+		apply(new UpdateRequestFirmBankingEvent(command.getAggregateIdentifier(),
+			command.getFirmBankingStatus()));
+		return id;
 	}
 
 	@EventSourcingHandler

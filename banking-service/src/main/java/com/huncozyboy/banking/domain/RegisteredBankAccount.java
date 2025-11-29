@@ -37,60 +37,60 @@ public class RegisteredBankAccount {
 	@Value
 	public static class RegisteredBankAccountId {
 
+		String registeredBankAccountId;
+
 		public RegisteredBankAccountId(String value) {
 			this.registeredBankAccountId = value;
 		}
-
-		String registeredBankAccountId;
 	}
 
 	@Value
 	public static class MembershipId {
 
+		String membershipId;
+
 		public MembershipId(String value) {
 			this.membershipId = value;
 		}
-
-		String membershipId;
 	}
 
 	@Value
 	public static class BankName {
 
+		String bankName;
+
 		public BankName(String value) {
 			this.bankName = value;
 		}
-
-		String bankName;
 	}
 
 	@Value
 	public static class BankAccountNumber {
 
+		String bankAccountNumber;
+
 		public BankAccountNumber(String value) {
 			this.bankAccountNumber = value;
 		}
-
-		String bankAccountNumber;
 	}
 
 	@Value
 	public static class LinkedStatusIsValid {
 
+		boolean linkedStatusIsValid;
+
 		public LinkedStatusIsValid(boolean value) {
 			this.linkedStatusIsValid = value;
 		}
-
-		boolean linkedStatusIsValid;
 	}
 
 	@Value
 	public static class AggregateIdentifier {
 
+		String aggregateIdentifier;
+
 		public AggregateIdentifier(String value) {
 			this.aggregateIdentifier = value;
 		}
-
-		String aggregateIdentifier;
 	}
 }

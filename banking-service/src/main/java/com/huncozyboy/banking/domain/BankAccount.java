@@ -15,7 +15,7 @@ public class BankAccount {
 	}
 
 	public void verifyBank() {
-		if(!isValid) {
+		if (!isValid) {
 			throw new IllegalArgumentException("등록되지 않은 계좌 " + bankName + ":" + bankAccountNumber);
 		}
 	}

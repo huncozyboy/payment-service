@@ -9,7 +9,7 @@ import lombok.EqualsAndHashCode;
 @Builder
 @Data
 @EqualsAndHashCode(callSuper = false)
-public class CreateRequestFirmBankingCommand  extends SelfValidating<CreateRequestFirmBankingCommand> {
+public class CreateRequestFirmBankingCommand extends SelfValidating<CreateRequestFirmBankingCommand> {
 	private String fromBankName;
 
 	private String fromBankAccountNumber;

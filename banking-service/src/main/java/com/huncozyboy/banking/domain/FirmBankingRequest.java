@@ -1,6 +1,7 @@
 package com.huncozyboy.banking.domain;
 
 import java.util.UUID;
+
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -16,9 +17,9 @@ public class FirmBankingRequest {
 	private final String toBankName;
 	private final String toBankAccountNumber;
 	private final int moneyAmount; // won
-	private int firmBankingStatus; // 0: 요청, 1: 완료, 2: 실패
 	private final UUID uuid;
 	private final String aggregateIdentifier;
+	private int firmBankingStatus; // 0: 요청, 1: 완료, 2: 실패
 
 	public static FirmBankingRequest generateFirmBankingRequest(
 		FirmBankingRequestId firmBankingingRequestId,
@@ -55,80 +56,80 @@ public class FirmBankingRequest {
 	@Value
 	public static class FirmBankingRequestId {
 
+		String firmBankingRequestId;
+
 		public FirmBankingRequestId(String value) {
 			this.firmBankingRequestId = value;
 		}
-
-		String firmBankingRequestId;
 	}
 
 	@Value
 	public static class FromBankName {
 
+		String fromBankName;
+
 		public FromBankName(String value) {
 			this.fromBankName = value;
 		}
-
-		String fromBankName;
 	}
 
 	@Value
 	public static class FromBankAccountNumber {
 
+		String fromBankAccountNumber;
+
 		public FromBankAccountNumber(String value) {
 			this.fromBankAccountNumber = value;
 		}
-
-		String fromBankAccountNumber;
 	}
 
 	@Value
 	public static class ToBankName {
 
+		String toBankName;
+
 		public ToBankName(String value) {
 			this.toBankName = value;
 		}
-
-		String toBankName;
 	}
 
 	@Value
 	public static class ToBankAccountNumber {
 
+		String toBankAccountNumber;
+
 		public ToBankAccountNumber(String value) {
 			this.toBankAccountNumber = value;
 		}
-
-		String toBankAccountNumber;
 	}
 
 	@Value
 	public static class MoneyAmount {
 
+		int moneyAmount;
+
 		public MoneyAmount(int value) {
 			this.moneyAmount = value;
 		}
-
-		int moneyAmount;
 	}
 
 	@Value
 	public static class FirmBankingStatus {
 
+		int firmBankingStatus;
+
 		public FirmBankingStatus(int value) {
 			this.firmBankingStatus = value;
 		}
-
-		int firmBankingStatus;
 	}
 
 	@Value
 	public static class FirmBankingAggregateIdentifier {
 
+		String aggregateIdentifier;
+
 		public FirmBankingAggregateIdentifier(String value) {
 			this.aggregateIdentifier = value;
 		}
-
-		String aggregateIdentifier;
 	}
 }

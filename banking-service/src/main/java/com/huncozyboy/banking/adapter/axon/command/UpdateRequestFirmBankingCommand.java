@@ -4,6 +4,7 @@ import jakarta.validation.constraints.NotNull;
 import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+
 import org.axonframework.modelling.command.TargetAggregateIdentifier;
 
 import com.huncozyboy.common.SelfValidating;
@@ -12,10 +13,10 @@ import com.huncozyboy.common.SelfValidating;
 @Data
 @EqualsAndHashCode(callSuper = false)
 public class UpdateRequestFirmBankingCommand extends SelfValidating<UpdateRequestFirmBankingCommand> {
+	private final int firmBankingStatus;
 	@NotNull
 	@TargetAggregateIdentifier
 	private String aggregateIdentifier;
-	private final int firmBankingStatus;
 
 	public UpdateRequestFirmBankingCommand(String aggregateIdentifier, int firmBankingStatus) {
 		this.aggregateIdentifier = aggregateIdentifier;
