@@ -1,4 +1,6 @@
 package com.huncozyboy.money.application.port.in;
 
-public class IncreaseMoneyRequestUseCase {
+public interface IncreaseMoneyRequestUseCase {
+
+	void increaseMoneyRequest(IncreaseMoneyRequestCommand command);
 }
