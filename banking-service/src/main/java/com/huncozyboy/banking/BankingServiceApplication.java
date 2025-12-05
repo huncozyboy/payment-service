@@ -1,4 +1,4 @@
-package java.com.huncozyboy.banking;
+package com.huncozyboy.banking;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
